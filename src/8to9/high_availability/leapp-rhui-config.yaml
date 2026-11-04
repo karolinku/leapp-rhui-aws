@@ -1,0 +1,18 @@
+rhui:
+  use_config : True
+  source_clients: [ rh-amazon-rhui-client-ha ]
+  target_clients: [ rh-amazon-rhui-client-ha ]
+  cloud_provider: aws
+  upgrade_files:
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/rhui-client-config-server-9-ha.crt : /etc/pki/rhui/product/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/content-rhel9-ha.crt : /etc/pki/rhui/product/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/rhui-client-config-server-9-ha.key : /etc/pki/rhui/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/content-rhel9-ha.key : /etc/pki/rhui/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/redhat-rhui-ha.repo : /etc/yum.repos.d/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/redhat-rhui-client-config-ha.repo : /etc/yum.repos.d/
+    /usr/share/leapp-repository/repositories/system_upgrade/common/files/rhui/aws-ha/amazon-id.py : /usr/lib/python3.6/site-packages/dnf-plugins/
+  rhui_target_repositories_to_use:
+    - rhel-9-appstream-rhui-rpms
+    - rhel-9-baseos-rhui-rpms
+    - rhel-9-for-x86_64-highavailability-rhui-rpms
+    - rhui-client-config-server-9-ha

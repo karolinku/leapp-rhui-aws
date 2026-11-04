@@ -1,0 +1,78 @@
+[rhui-client-config-server-8]
+name=Red Hat Update Infrastructure 3 Client Configuration Server 8
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror/protected/rhui-client-config/rhel/server/8/$basearch/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/rhui-client-config-server-8.crt
+sslclientkey=/etc/pki/rhui/rhui-client-config-server-8.key
+
+[rhel-8-appstream-rhui-rpms]
+name=Red Hat Enterprise Linux 8 for $basearch - AppStream from RHUI (RPMs)
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror/content/dist/rhel8/rhui/$releasever/$basearch/appstream/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+
+[rhel-8-baseos-rhui-rpms]
+name=Red Hat Enterprise Linux 8 for $basearch - BaseOS from RHUI (RPMs)
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror/content/dist/rhel8/rhui/$releasever/$basearch/baseos/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+
+[codeready-builder-for-rhel-8-rhui-rpms]
+name=Red Hat CodeReady Linux Builder for RHEL 8 $basearch (RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel8/rhui/$releasever/$basearch/codeready-builder/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+
+[rhel-8-supplementary-rhui-rpms]
+name=Red Hat Enterprise Linux 8 - Supplementary (RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel8/rhui/$releasever/$basearch/supplementary/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+
+# Beta
+
+[rhel-8-appstream-beta-rhui-rpms]
+name=Red Hat Enterprise Linux 8 for $basearch - AppStream Beta from RHUI (RPMs)
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror/content/beta/rhel8/rhui/$releasever/$basearch/appstream/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+
+[rhel-8-baseos-beta-rhui-rpms]
+name=Red Hat Enterprise Linux 8 for $basearch - BaseOS Beta from RHUI (RPMs)
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror/content/beta/rhel8/rhui/$releasever/$basearch/baseos/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta
+sslverify=1
+sslclientkey=/etc/pki/rhui/content-rhel8.key
+sslclientcert=/etc/pki/rhui/product/content-rhel8.crt
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
